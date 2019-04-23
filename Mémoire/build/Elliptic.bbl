@@ -1,0 +1,55 @@
+\begin{thebibliography}{}
+
+\bibitem[Lenstra, 1987]{ref9}
+Lenstra, H. (1987).
+\newblock Factoring integers with elliptic curves.
+\newblock {\em Annals of Math.}, pages 649--673.
+
+\bibitem[Lutz, 1937]{ref3}
+Lutz, E. (1937).
+\newblock Sur l'équation $y^2=x^3-ax-b$ dans les corps p-adic.
+\newblock {\em J.Reine Angew. Math.177}, pages 237--247.
+
+\bibitem[Mazur, 1977]{ref6}
+Mazur, B. (1977).
+\newblock Modular curves and the einsenstein ideal.
+\newblock {\em IHES Publ. Math. 47}, pages 33--186.
+
+\bibitem[Mazur, 1978]{ref7}
+Mazur, B. (1978).
+\newblock Rational isogenies of prime degree.
+\newblock {\em Invent. Math. 44}, pages 129--162.
+
+\bibitem[Mordell, 1922]{ref5}
+Mordell, L. (1922).
+\newblock On the rational solutions of the indetermine equations of the third
+  and fourth degrees.
+\newblock {\em Proc. Camb. Philos. Soc. 21}, pages 179--192.
+
+\bibitem[Nagell, 1935]{ref4}
+Nagell, T. (1935).
+\newblock Solutions de quelques problèmes dans la théorie arithmétique des
+  cubiques planes du premier genre.
+\newblock {\em Wid. Acad. Skrifter Oslo I}.
+
+\bibitem[Pollard, 1974]{ref10}
+Pollard, J. (1974).
+\newblock Theorems on factorization and primality testing.
+\newblock {\em Proc. Cambridge Philos. Soc.}, pages 521--528.
+
+\bibitem[Silverman, 2009]{ref2}
+Silverman, J.~H. (2009).
+\newblock {\em The Arithmetic of Elliptic Curves}.
+\newblock Springer.
+
+\bibitem[Silverman, 2013]{ref8}
+Silverman, J.~H. (2013).
+\newblock {\em Advanced Topics in the Arithmetic of Elliptic Curves}.
+\newblock Springer.
+
+\bibitem[Tate and Silverman, 2015]{ref}
+Tate, J.~T. and Silverman, J.~H. (2015).
+\newblock {\em Rational Points on Elliptic Curves}.
+\newblock Springer.
+
+\end{thebibliography}

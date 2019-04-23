@@ -1,0 +1,6 @@
+\begin{thebibliography}{1}
+\bibitem{Silverman1.elts} \textsc{Joseph H. Silverman, John T. Tate}, \emph{Rational Points on Elliptic Curves}, \textsc{Springer, 2nd Edition, 2015}
+\bibitem{Silverman2.elts} \textsc{Joseph H. Silverman}, \emph{The Arithmetic of Elliptic Curves}, \textsc{Springer, 2nd Edition, 2009}
+\bibitem{Nag.elts} \textsc{Elisabeth Lutz}, \emph{Sur l'équation $y^2=x^3-Ax-B$ dans les corps p-adic}, \textsc{J.Reine Angew. Math.177,  1937}
+\bibitem{Nag.elts} \textsc{Trygve Nagell}, \emph{Solutions de quelques problèmes dans la théorie arithmétique des cubiques planes du premier genre}, \textsc{Wid. Acad. Skrifter Oslo I, xww<<1935}
+\\ \\

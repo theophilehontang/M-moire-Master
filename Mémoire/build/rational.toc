@@ -1,0 +1,20 @@
+\select@language {french}
+\contentsline {section}{\numberline {I}G\IeC {\'e}n\IeC {\'e}ralit\IeC {\'e}s}{5}{section.1}
+\contentsline {subsection}{\numberline {I.1}Loi de groupe}{5}{subsection.1.1}
+\contentsline {subsection}{\numberline {I.2}Formules de duplication}{6}{subsection.1.2}
+\contentsline {subsection}{\numberline {I.3}Points d'ordre fini}{7}{subsection.1.3}
+\contentsline {subsection}{\numberline {I.4}Le $j$-invariant}{8}{subsection.1.4}
+\contentsline {section}{\numberline {II}Th\IeC {\'e}or\IeC {\`e}me de Mordell}{11}{section.2}
+\contentsline {subsection}{\numberline {II.1}Preuve}{11}{subsection.2.1}
+\contentsline {section}{\numberline {III}Courbes elliptiques sur les corps finis}{18}{section.3}
+\contentsline {subsection}{\numberline {III.1}Algorithme de Lenstra}{18}{subsection.3.1}
+\contentsline {subsection}{\numberline {III.2}Cl\IeC {\'e} d'\IeC {\'e}change de Diffie-Hellman}{22}{subsection.3.2}
+\contentsline {subsection}{\numberline {III.3}Algorithmes de comptage de points}{22}{subsection.3.3}
+\contentsline {subsection}{\numberline {III.4}Tests de Primalit\IeC {\'e}}{23}{subsection.3.4}
+\contentsline {section}{\numberline {IV}Courbes elliptiques sur le corps des nombres complexes}{24}{section.4}
+\contentsline {subsection}{\numberline {IV.1}Fonctions elliptiques}{24}{subsection.4.1}
+\contentsline {subsection}{\numberline {IV.2}Groupe modulaire}{31}{subsection.4.2}
+\contentsline {subsection}{\numberline {IV.3}Multiplication complexe}{36}{subsection.4.3}
+\contentsline {section}{\numberline {A}Bibliographie}{38}{appendix.A}
+\contentsline {section}{\numberline {B}Annexe}{39}{appendix.B}
+\contentsline {section}{\numberline {C}Programmes Maple}{40}{figure.5}

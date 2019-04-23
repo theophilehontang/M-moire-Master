@@ -1,0 +1,141 @@
+\begin{thebibliography}{HPS08}
+
+\bibitem[AM93]{ref19}
+A.O.L. Atkin and F.~Morain.
+\newblock Elliptic curves and primality proving.
+\newblock {\em Mathematics of Computation}, pages 29--68, Juillet 1993.
+
+\bibitem[CG17]{ref28}
+Philippe Caldero and Jérôme Germoni.
+\newblock {\em Nouvelles histoires hédonistes de groupes et de géométries}.
+\newblock Calvage et Mounet, 2017.
+
+\bibitem[Cha90]{ref29}
+Boris Chabat.
+\newblock {\em Introduction à l'analyse complexe, Tome I}.
+\newblock Mir Moscou, 1990.
+
+\bibitem[Cha13]{ref20}
+Igor Chafarevitch.
+\newblock {\em Basic Algebraic Geometry I}.
+\newblock Springer, 2013.
+
+\bibitem[Che15]{ref21}
+Gaëtan Chenevier.
+\newblock Introduction aux formes modulaires.
+\newblock Leçon à l'Ecole Normale Supérieure, Mars 2015.
+
+\bibitem[DH76]{ref22}
+W.~Diffie and M.~Hellman.
+\newblock New directions in cryptography.
+\newblock {\em IEEE transactions on information theory}, pages 644--654,
+  Juillet 1976.
+
+\bibitem[GK86]{ref23}
+S.~Goldwasser and J.~Kilian.
+\newblock Almost all primes can be quickly certified.
+\newblock {\em ACM}, pages 316--329, Juillet 1986.
+
+\bibitem[Har77]{ref24}
+Robin Hartshorne.
+\newblock {\em Algebraic Geometry}.
+\newblock Springer, 1977.
+
+\bibitem[Has36]{ref15}
+Helmut Hasse.
+\newblock Zur theorie der abstrakten elliptischen funktionenkörper. i, ii iii.
+\newblock {\em Journal de Crelle}, page 175, 1936.
+
+\bibitem[HPS08]{ref16}
+J.~Hoffstein, J.~Pipher, and J.~Silverman.
+\newblock {\em An Introduction to Mathematical Cryptography}.
+\newblock Springer, 2008.
+
+\bibitem[Hus75]{ref27}
+Dale Husemoller.
+\newblock {\em Elliptic Curves}.
+\newblock Springer, 1975.
+
+\bibitem[Kob87]{ref12}
+Neal Koblitz.
+\newblock Elliptic curve cryptosystems.
+\newblock {\em Mathematics of Computation}, pages 203--209, 1987.
+
+\bibitem[Kob94]{ref11}
+Neal Koblitz.
+\newblock {\em A course in Number Theory and Cryptography}.
+\newblock Springer, 1994.
+
+\bibitem[LC72]{ref25}
+Mikhaïl Lavrantiev and Boris Chabat.
+\newblock {\em Méthodes de la théorie des fonctions d'une variable complexe}.
+\newblock Mir Moscou, 1972.
+
+\bibitem[Len87]{ref9}
+Hendrick Lenstra.
+\newblock Factoring integers with elliptic curves.
+\newblock {\em Annals of Math.}, pages 649--673, 1987.
+
+\bibitem[Lut37]{ref3}
+Elisabeth Lutz.
+\newblock Sur l'équation $y^2=x^3-ax-b$ dans les corps $p$-adic.
+\newblock {\em J.Reine Angew. Math.177}, pages 237--247, 1937.
+
+\bibitem[Maz77]{ref6}
+Barry Mazur.
+\newblock Modular curves and the einsenstein ideal.
+\newblock {\em IHES Publ. Math. 47}, pages 33--186, 1977.
+
+\bibitem[Maz78]{ref7}
+Barry Mazur.
+\newblock Rational isogenies of prime degree.
+\newblock {\em Invent. Math. 44}, pages 129--162, 1978.
+
+\bibitem[Mil85]{ref13}
+Victor Miller.
+\newblock Use of elliptic curves in cryptography.
+\newblock {\em Proc. Cambridge Philos. Soc.}, pages 417--426, 1985.
+
+\bibitem[Mon87]{ref17}
+Peter Montgomery.
+\newblock Speeding the pollard and elliptic curve methods of factorization.
+\newblock {\em Mathematics of Computation}, pages 243--264, 1987.
+
+\bibitem[Mor22]{ref5}
+Louis Mordell.
+\newblock On the rational solutions of the indetermine equations of the third
+  and fourth degrees.
+\newblock {\em Proc. Camb. Philos. Soc. 21}, pages 179--192, 1922.
+
+\bibitem[Nag35]{ref4}
+Trygve Nagell.
+\newblock Solutions de quelques problèmes dans la théorie arithmétique des
+  cubiques planes du premier genre.
+\newblock {\em Wid. Acad. Skrifter Oslo I}, 1935.
+
+\bibitem[Sch95]{ref18}
+Renée Schoof.
+\newblock Counting points on elliptic curves over finite fields.
+\newblock {\em Journal Théorie Nombres Bordeaux}, pages 219--254, 1995.
+
+\bibitem[Ser95]{ref26}
+Jean-Pierre Serre.
+\newblock {\em Cours d'arithmétique}.
+\newblock PUF, 1995.
+
+\bibitem[Sil94]{ref8}
+Joseph~H. Silverman.
+\newblock {\em Advanced Topics in the Arithmetic of Elliptic Curves}.
+\newblock Springer, 1994.
+
+\bibitem[Sil09]{ref2}
+Joseph~H. Silverman.
+\newblock {\em The Arithmetic of Elliptic Curves}.
+\newblock Springer, 2009.
+
+\bibitem[ST15]{ref}
+Joseph~H. Silverman and John~T. Tate.
+\newblock {\em Rational Points on Elliptic Curves}.
+\newblock Springer, 2015.
+
+\end{thebibliography}

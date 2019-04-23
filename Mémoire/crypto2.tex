@@ -1,0 +1,374 @@
+%% Created by Maple 2016.2, Windows 10
+%% Source Worksheet: crypto
+%% Generated: Tue May 02 23:12:04 CEST 2017
+\documentclass{article}
+\usepackage{maplestd2e}
+\def\emptyline{\vspace{12pt}}
+\begin{document}
+\pagestyle{empty}
+\DefineParaStyle{Maple Bullet Item}
+\DefineParaStyle{Maple Heading 1}
+\DefineParaStyle{Maple Warning}
+\DefineParaStyle{Maple Heading 4}
+\DefineParaStyle{Maple Heading 2}
+\DefineParaStyle{Maple Heading 3}
+\DefineParaStyle{Maple Dash Item}
+\DefineParaStyle{Maple Error}
+\DefineParaStyle{Maple Title}
+\DefineParaStyle{Maple Text Output}
+\DefineParaStyle{Maple Normal}
+\DefineCharStyle{Maple 2D Output}
+\DefineCharStyle{Maple 2D Input}
+\DefineCharStyle{Maple Maple Input}
+\DefineCharStyle{Maple 2D Math}
+\DefineCharStyle{Maple Hyperlink}
+\begin{maplegroup}
+\begin{Maple Normal}{
+Powers\textit{permet de calculer a\symbol{94}k mod n en d�composant k en base 2.}}\end{Maple Normal}
+
+\begin{Maple Normal}{
+}\end{Maple Normal}
+\mapleinline{inert}{2d}{Powers := proc (n, a, k) local X, Z, r, Y, A, i, j; X := convert(k, 'base', 2); Z := convert(X, array); r := 0; Y := 1; while 2^r <= k do r := r+1 end do; A := Matrix(1, r); A[1, 1] := a; for i from 2 to r do A[1, i] := `mod`(A[1, i-1]^2, n) end do; for j to r do if Z[j] = 1 then Y := Y*A[1, j] end if end do; `mod`(Y, n) end proc}{\[\displaystyle {\it Powers}\, := \,\textbf{proc} (nak) \\
+\textbf{local} \,X,\,Z,\,r,\,Y,\,A,\,i,\,j; \\
+\mapleIndent{1} X\,:=\,\mathit{convert} (k,\,'base',\,2);\\
+\mapleIndent{1} Z\,:=\,\mathit{convert} (X,\,array);\\
+\mapleIndent{1} r\,:=\,0;\\
+\mapleIndent{1} Y\,:=\,1;\\
+\mapleIndent{1} \textbf{while} \,2\hat{~}{r}\&lek \,\textbf{do}\\
+\mapleIndent{2} r\,:=\,r + 1\\
+\mapleIndent{1} \textbf{end\ do};;\\
+\mapleIndent{1} A\,:=\,\mathit{Matrix} (1,\,r);\\
+\mapleIndent{1} A[1,\,1]\,:=\,a;\\
+\mapleIndent{1} \textbf{for} \,i \,\textbf{from} \,2 \,\textbf{to} \,r \,\textbf{do}\\
+\mapleIndent{2} A[1,\,i]\,:=\,\mathit{mod} (A[1,\,i + -1]\hat{~}{2},\,n)\\
+\mapleIndent{1} \textbf{end\ do};;\\
+\mapleIndent{1} \textbf{for} \,j \,\textbf{to} \,r \,\textbf{do}\\
+\mapleIndent{2} \textbf{if} \,Z[j] \, = \, 1 \, \textbf{then} \\
+\mapleIndent{3} Y\,:=\,Y \ast A[1,\,j]\\
+\mapleIndent{2} \textbf{end\ if}; \\
+\mapleIndent{1} \textbf{end\ do};;\\
+\mapleIndent{1} \mathit{mod} (Y,\,n)\\
+\textbf{end\ proc};\]}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{Powers := proc (n, a, k) local X, Z, r, Y, A, i, j; X := convert(k, 'base', 2); Z := convert(X, array); r := 0; Y := 1; while 2^r <= k do r := r+1 end do; A := Matrix(1, r); A[1, 1] := a; for i from 2 to r do A[1, i] := `mod`(A[1, i-1]^2, n) end do; for j to r do if Z[j] = 1 then Y := Y*A[1, j] end if end do; `mod`(Y, n) end proc}{\[\displaystyle {\it Powers}\, := \,\textbf{proc} (nak) \\
+\textbf{local} \,X,\,Z,\,r,\,Y,\,A,\,i,\,j; \\
+\mapleIndent{1} X\,:=\,\mathit{convert} (k,\,'base',\,2);\\
+\mapleIndent{1} Z\,:=\,\mathit{convert} (X,\,array);\\
+\mapleIndent{1} r\,:=\,0;\\
+\mapleIndent{1} Y\,:=\,1;\\
+\mapleIndent{1} \textbf{while} \,2\hat{~}{r}\&lek \,\textbf{do}\\
+\mapleIndent{2} r\,:=\,r + 1\\
+\mapleIndent{1} \textbf{end\ do};;\\
+\mapleIndent{1} A\,:=\,\mathit{Matrix} (1,\,r);\\
+\mapleIndent{1} A[1,\,1]\,:=\,a;\\
+\mapleIndent{1} \textbf{for} \,i \,\textbf{from} \,2 \,\textbf{to} \,r \,\textbf{do}\\
+\mapleIndent{2} A[1,\,i]\,:=\,\mathit{mod} (A[1,\,i + -1]\hat{~}{2},\,n)\\
+\mapleIndent{1} \textbf{end\ do};;\\
+\mapleIndent{1} \textbf{for} \,j \,\textbf{to} \,r \,\textbf{do}\\
+\mapleIndent{2} \textbf{if} \,Z[j] \, = \, 1 \, \textbf{then} \\
+\mapleIndent{3} Y\,:=\,Y \ast A[1,\,j]\\
+\mapleIndent{2} \textbf{end\ if}; \\
+\mapleIndent{1} \textbf{end\ do};;\\
+\mapleIndent{1} \mathit{mod} (Y,\,n)\\
+\textbf{end\ proc};\]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{Maple Normal}{
+\textbf{Algorithme p-1 de Pollard}}\end{Maple Normal}
+
+\begin{Maple Normal}{
+}\end{Maple Normal}
+\mapleinline{inert}{2d}{Pollard := proc (n) local a, d, b, g; a := 3; for d from 2 to factorial(1000) do b := Powers(n, a, d); g := gcd(b-1, n); if 1 < g then return g end if end do end proc; 1}{\[\displaystyle \]}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{Pollard := proc (n) local a, d, b, g; a := 3; for d from 2 to factorial(1000) do b := Powers(n, a, d); g := gcd(b-1, n); if 1 < g then return g end if end do end proc}{\[\displaystyle {\it Pollard}\, := \,\textbf{proc} (n) \\
+\textbf{local} \,a,\,d,\,b,\,g; \\
+\mapleIndent{1} a\,:=\,3;\\
+\mapleIndent{1} \textbf{for} \,d \,\textbf{from} \,2 \,\textbf{to} \,\mathit{factorial} (1000) \,\textbf{do}\\
+\mapleIndent{2} b\,:=\,\mathit{Powers} (n,\,a,\,d);\\
+\mapleIndent{2} g\,:=\,\mathit{gcd} (b + -1,\,n);\\
+\mapleIndent{2} \textbf{if} \,1<g \, \textbf{then} \\
+\mapleIndent{3} \textbf{return}\,g\\
+\mapleIndent{2} \textbf{end\ if}; \\
+\mapleIndent{1} \textbf{end\ do};\\
+\textbf{end\ proc};\]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{Maple Normal}{
+Exemple du livre de Silverman section 4.4}\end{Maple Normal}
+
+\mapleinline{inert}{2d}{Pollard(1715761513)}{\[\displaystyle {\it Pollard} \left( 1715761513 \right) \]}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{26927}{\[\displaystyle 26927\]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{Maple Normal}{
+double\textit{permet de calculer kP avec P=(x1,y1) et la courbe elliptique donn�e par y\symbol{94}2=x\symbol{94}3+bx+c}}\end{Maple Normal}
+
+\begin{Maple Normal}{
+}\end{Maple Normal}
+\mapleinline{inert}{2d}{double := proc (k, x1, y1, b, c, n) local r, X, Z, A, m, lambda, nu, i, x, y, Y, x3, y3, j, l; X := convert(k, 'base', 2); Z := convert(X, array); r := 0; while 2^r <= k do r := r+1 end do; A := Matrix(1, 2*r); A[1, 1] := x1; A[1, 2] := y1; for j to r-1 do if gcd(2*A[1, 2*j], n) = 1 and gcd(4*A[1, 2*j-1]^3+4*b*A[1, 2*j-1]+4*c, n) = 1 then A[1, 2*j+1] := `mod`((A[1, 2*j-1]^4-2*b*A[1, 2*j-1]^2-8*c*A[1, 2*j-1]+b^2)/(4*A[1, 2*j-1]^3+4*b*A[1, 2*j-1]+4*c), n); lambda := `mod`((1/2)*(3*A[1, 2*j-1]^2+b)/A[1, 2*j], n); nu := A[1, 2*j]-lambda*A[1, 2*j-1]; A[1, 2*j+2] := `mod`(-lambda*A[1, 2*j+1]-nu, n) else return max(gcd(A[1, 2*j], n), gcd(4*A[1, 2*j-1]^3+4*b*A[1, 2*j-1]+4*c, n)) end if end do; m := 1; for i to r do if Z[i] = 0 then m := m+1 end if end do; x := A[1, 2*m-1]; y := A[1, 2*m]; Z[m] := 0; for l to r do if Z[l] = 1 then X := A[1, 2*l-1]; Y := A[1, 2*l]; if gcd(X-x, n) = 1 then lambda := `mod`((Y-y)/(X-x), n); x3 := lambda^2-x-X; y3 := -lambda*x3-y+lambda*x; x := `mod`(x3, n); y := `mod`(y3, n) elif gcd(X-x, n) < n then return gcd(X-x, n) elif gcd(X-x, n) = n then (D(print))("refaire") end if end if end do; [x, y] end proc; 1}{\[\displaystyle \]}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{double := proc (k, x1, y1, b, c, n) local r, X, Z, A, m, lambda, nu, i, x, y, Y, x3, y3, j, l; X := convert(k, 'base', 2); Z := convert(X, array); r := 0; while 2^r <= k do r := r+1 end do; A := Matrix(1, 2*r); A[1, 1] := x1; A[1, 2] := y1; for j to r-1 do if gcd(2*A[1, 2*j], n) = 1 and gcd(4*A[1, 2*j-1]^3+4*b*A[1, 2*j-1]+4*c, n) = 1 then A[1, 2*j+1] := `mod`((A[1, 2*j-1]^4-2*b*A[1, 2*j-1]^2-8*c*A[1, 2*j-1]+b^2)/(4*A[1, 2*j-1]^3+4*b*A[1, 2*j-1]+4*c), n); lambda := `mod`(((3/2)*A[1, 2*j-1]^2+(1/2)*b)/A[1, 2*j], n); nu := A[1, 2*j]-lambda*A[1, 2*j-1]; A[1, 2*j+2] := `mod`(-lambda*A[1, 2*j+1]-nu, n) else return max(gcd(A[1, 2*j], n), gcd(4*A[1, 2*j-1]^3+4*b*A[1, 2*j-1]+4*c, n)) end if end do; m := 1; for i to r do if Z[i] = 0 then m := m+1 end if end do; x := A[1, 2*m-1]; y := A[1, 2*m]; Z[m] := 0; for l to r do if Z[l] = 1 then X := A[1, 2*l-1]; Y := A[1, 2*l]; if gcd(X-x, n) = 1 then lambda := `mod`((Y-y)/(X-x), n); x3 := lambda^2-x-X; y3 := -lambda*x3-y+lambda*x; x := `mod`(x3, n); y := `mod`(y3, n) elif gcd(X-x, n) < n then return gcd(X-x, n) elif gcd(X-x, n) = n then (D(print))("refaire") end if end if end do; [x, y] end proc}{\[\displaystyle {\it double}\, := \,\textbf{proc} (kx1y1bcn) \\
+\textbf{local} \,r,\,X,\,Z,\,A,\,m,\,lambda,\,nu,\,i,\,x,\,y,\,Y,\,x3,\,y3,\,j,\,l; \\
+\mapleIndent{1} X\,:=\,\mathit{convert} (k,\,'base',\,2);\\
+\mapleIndent{1} Z\,:=\,\mathit{convert} (X,\,array);\\
+\mapleIndent{1} r\,:=\,0;\\
+\mapleIndent{1} \textbf{while} \,2\hat{~}{r}\&lek \,\textbf{do}\\
+\mapleIndent{2} r\,:=\,r + 1\\
+\mapleIndent{1} \textbf{end\ do};;\\
+\mapleIndent{1} A\,:=\,\mathit{Matrix} (1,\,2 \ast r);\\
+\mapleIndent{1} A[1,\,1]\,:=\,x1;\\
+\mapleIndent{1} A[1,\,2]\,:=\,y1;\\
+\mapleIndent{1} \textbf{for} \,j \,\textbf{to} \,r + -1 \,\textbf{do}\\
+\mapleIndent{2} \textbf{if} \,\mathit{gcd} (2 \ast A[1,\,2 \ast j],\,n) \, = \, 1 \, \textbf{and} \, \mathit{gcd} (4 \ast A[1,\,2 \ast j + -1]\hat{~}{3} + 4 \ast b \ast A[1,\,2 \ast j + -1] + 4 \ast c,\,n) \, = \, 1 \, \textbf{then} \\
+\mapleIndent{3} A[1,\,2 \ast j + 1]\,:=\,\mathit{mod} ((A[1,\,2 \ast j + -1]\hat{~}{4}-2 \ast b \ast A[1,\,2 \ast j + -1]\hat{~}{2}-8 \ast c \ast A[1,\,2 \ast j + -1] + b\hat{~}{2}) \ast 4 \ast A[1,\,2 \ast j + -1]\hat{~}{3} + 4 \ast b \ast A[1,\,2 \ast j + -1] + 4 \ast c\hat{~}{-1},\,n);\\
+\mapleIndent{3} lambda\,:=\,\mathit{mod} ((3/2 \ast A[1,\,2 \ast j + -1]\hat{~}{2} + 1/2 \ast b) \ast A[1,\,2 \ast j]\hat{~}{-1},\,n);\\
+\mapleIndent{3} nu\,:=\,A[1,\,2 \ast j]-lambda \ast A[1,\,2 \ast j + -1];\\
+\mapleIndent{3} A[1,\,2 \ast j + 2]\,:=\,\mathit{mod} (-lambda \ast A[1,\,2 \ast j + 1]-nu,\,n)\\
+\mapleIndent{2} \textbf{else}\\
+\mapleIndent{3} \textbf{return}\,\mathit{max} (\mathit{gcd} (A[1,\,2 \ast j],\,n),\,\mathit{gcd} (4 \ast A[1,\,2 \ast j + -1]\hat{~}{3} + 4 \ast b \ast A[1,\,2 \ast j + -1] + 4 \ast c,\,n))\\
+\mapleIndent{2} \textbf{end\ if}; \\
+\mapleIndent{1} \textbf{end\ do};;\\
+\mapleIndent{1} m\,:=\,1;\\
+\mapleIndent{1} \textbf{for} \,i \,\textbf{to} \,r \,\textbf{do}\\
+\mapleIndent{2} \textbf{if} \,Z[i] \, = \, 0 \, \textbf{then} \\
+\mapleIndent{3} m\,:=\,m + 1\\
+\mapleIndent{2} \textbf{end\ if}; \\
+\mapleIndent{1} \textbf{end\ do};;\\
+\mapleIndent{1} x\,:=\,A[1,\,2 \ast m + -1];\\
+\mapleIndent{1} y\,:=\,A[1,\,2 \ast m];\\
+\mapleIndent{1} Z[m]\,:=\,0;\\
+\mapleIndent{1} \textbf{for} \,l \,\textbf{to} \,r \,\textbf{do}\\
+\mapleIndent{2} \textbf{if} \,Z[l] \, = \, 1 \, \textbf{then} \\
+\mapleIndent{3} X\,:=\,A[1,\,2 \ast l + -1];\\
+\mapleIndent{3} Y\,:=\,A[1,\,2 \ast l];\\
+\mapleIndent{3} \textbf{if} \,\mathit{gcd} (X-x,\,n) \, = \, 1 \, \textbf{then} \\
+\mapleIndent{4} lambda\,:=\,\mathit{mod} ((Y-y) \ast X-x\hat{~}{-1},\,n);\\
+\mapleIndent{4} x3\,:=\,lambda\hat{~}{2}-x-X;\\
+\mapleIndent{4} y3\,:=\,-lambda \ast x3-y + lambda \ast x;\\
+\mapleIndent{4} x\,:=\,\mathit{mod} (x3,\,n);\\
+\mapleIndent{4} y\,:=\,\mathit{mod} (y3,\,n)\\
+\mapleIndent{3} \textbf{elif} \,\mathit{gcd} (X-x,\,n)<n \, \textbf{then} \\
+\mapleIndent{4} \textbf{return}\,\mathit{gcd} (X-x,\,n)\\
+\mapleIndent{3} \textbf{elif} \,\mathit{gcd} (X-x,\,n) \, = \, n \, \textbf{then} \\
+\mapleIndent{4} \mathit{\mathit{D} (print)} (``refaire'')\\
+\mapleIndent{3} \textbf{end\ if}; \\
+\mapleIndent{2} \textbf{end\ if}; \\
+\mapleIndent{1} \textbf{end\ do};;\\
+\mapleIndent{1} [x,\,y]\\
+\textbf{end\ proc};\]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{Maple Normal}{
+\begin{Maple Normal}{
+\mapleinline{inert}{2d}{}{\[\displaystyle \]}
+}\end{Maple Normal}
+}\end{Maple Normal}
+\begin{maplegroup}
+\begin{Maple Normal}{
+\textbf{Factorisation de Lenstra par les courbes elliptiques ou ECM}}\end{Maple Normal}
+
+\begin{Maple Normal}{
+}\end{Maple Normal}
+\mapleinline{inert}{2d}{Lenstra := proc (n) local c, Q, p, b, x1, y1; if n::prime then return print("n est premier") end if; b := rand(); x1 := rand(); y1 := rand(); c := `mod`(y1^2-x1^3-b*x1, n); if 1 < gcd(4*b^3+27*c^2, n) then return gcd(4*b^3+27*c^2, n) end if; for p from 2 to factorial(1000) do Q := double(factorial(p), x1, y1, b, c, n); if Q::integer then return Q end if; b := rand(); x1 := rand(); y1 := rand(); c := `mod`(y1^2-x1^3-b*x1, n); if 1 < gcd(4*b^3+27*c^2, n) then return gcd(4*b^3+27*c^2, n) end if end do; print("Réessayer avec une nouvelle courbe et/ou point"); Q end proc; 1}{\[\displaystyle \]}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{Lenstra := proc (n) local c, Q, p, b, x1, y1; if n::prime then return print("n est premier") end if; b := rand(); x1 := rand(); y1 := rand(); c := `mod`(y1^2-x1^3-b*x1, n); if 1 < gcd(4*b^3+27*c^2, n) then return gcd(4*b^3+27*c^2, n) end if; for p from 2 to factorial(1000) do Q := double(factorial(p), x1, y1, b, c, n); if Q::integer then return Q end if; b := rand(); x1 := rand(); y1 := rand(); c := `mod`(y1^2-x1^3-b*x1, n); if 1 < gcd(4*b^3+27*c^2, n) then return gcd(4*b^3+27*c^2, n) end if end do; print("Réessayer avec une nouvelle courbe et/ou point"); Q end proc}{\[\displaystyle {\it Lenstra}\, := \,\textbf{proc} (n) \\
+\textbf{local} \,c,\,Q,\,p,\,b,\,x1,\,y1; \\
+\mapleIndent{1} \textbf{if} \,n::prime \, \textbf{then} \\
+\mapleIndent{2} \textbf{return}\,\mathit{print} (n\ est\ premier'')\\
+\mapleIndent{1} \textbf{end\ if}; ;\\
+\mapleIndent{1} b\,:=\,\mathit{rand} ();\\
+\mapleIndent{1} x1\,:=\,\mathit{rand} ();\\
+\mapleIndent{1} y1\,:=\,\mathit{rand} ();\\
+\mapleIndent{1} c\,:=\,\mathit{mod} (y1\hat{~}{2}-x1\hat{~}{3}-b \ast x1,\,n);\\
+\mapleIndent{1} \textbf{if} \,1<\mathit{gcd} (4 \ast b\hat{~}{3} + 27 \ast c\hat{~}{2},\,n) \, \textbf{then} \\
+\mapleIndent{2} \textbf{return}\,\mathit{gcd} (4 \ast b\hat{~}{3} + 27 \ast c\hat{~}{2},\,n)\\
+\mapleIndent{1} \textbf{end\ if}; ;\\
+\mapleIndent{1} \textbf{for} \,p \,\textbf{from} \,2 \,\textbf{to} \,\mathit{factorial} (1000) \,\textbf{do}\\
+\mapleIndent{2} Q\,:=\,\mathit{double} (\mathit{factorial} (p),\,x1,\,y1,\,b,\,c,\,n);\\
+\mapleIndent{2} \textbf{if} \,Q::integer \, \textbf{then} \\
+\mapleIndent{3} \textbf{return}\,Q\\
+\mapleIndent{2} \textbf{end\ if}; ;\\
+\mapleIndent{2} b\,:=\,\mathit{rand} ();\\
+\mapleIndent{2} x1\,:=\,\mathit{rand} ();\\
+\mapleIndent{2} y1\,:=\,\mathit{rand} ();\\
+\mapleIndent{2} c\,:=\,\mathit{mod} (y1\hat{~}{2}-x1\hat{~}{3}-b \ast x1,\,n);\\
+\mapleIndent{2} \textbf{if} \,1<\mathit{gcd} (4 \ast b\hat{~}{3} + 27 \ast c\hat{~}{2},\,n) \, \textbf{then} \\
+\mapleIndent{3} \textbf{return}\,\mathit{gcd} (4 \ast b\hat{~}{3} + 27 \ast c\hat{~}{2},\,n)\\
+\mapleIndent{2} \textbf{end\ if}; \\
+\mapleIndent{1} \textbf{end\ do};;\\
+\mapleIndent{1} \mathit{print} (R�essayer\ avec\ une\ nouvelle\ courbe\ et/ou\ point'');\\
+\mapleIndent{1} Q\\
+\textbf{end\ proc};\]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{Maple Normal}{
+\begin{Maple Normal}{
+\mapleinline{inert}{2d}{}{\[\displaystyle \]}
+}\end{Maple Normal}
+}\end{Maple Normal}
+\begin{maplegroup}
+\begin{Maple Normal}{
+Exemple du livre de Silverman Section 4.4}\end{Maple Normal}
+
+\mapleinline{inert}{2d}{Lenstra(1715761513)}{\[\displaystyle {\it Lenstra} \left( 1715761513 \right) \]}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{26927}{\[\displaystyle 26927\]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{Maple Normal}{
+\begin{Maple Normal}{
+\mapleinline{inert}{2d}{}{$\displaystyle $}
+\mapleinline{inert}{2d}{}{$\displaystyle $}
+}\end{Maple Normal}
+}\end{Maple Normal}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{2d}{echelle := proc (k, x1, a, b, n) local r, m, h, X, Z, Q, P, j; r := 0; m := Matrix(1, 2); h := Matrix(1, 2); while 2^r <= k do r := r+1 end do; X := convert(k, 'base', 2); Z := convert(X, array); Q := Matrix(1, 2); P := Matrix(1, 2); Q[1, 1] := `mod`(x1, n); Q[1, 2] := 1; P[1, 1] := `mod`((x1+1)^2*(x1-1)^2, n); P[1, 2] := `mod`((4*x1)(x1^2+(a+2)*x1), n); for j from 0 to r-2 do if Z[r-1-j] = 1 then if gcd(Q[1, 1], n) = 1 and gcd(Q[1, 2], n) = 1 and gcd(P[1, 1], n) = 1 and gcd(P[1, 2], n) = 1 then h[1, 1] := `mod`(((P[1, 1]-P[1, 2])(Q[1, 1]+Q[1, 2])+(P[1, 1]+P[1, 2])(Q[1, 1]-Q[1, 2]))^2, n); h[1, 2] := `mod`(x1*((P[1, 1]-P[1, 2])(Q[1, 1]+Q[1, 2])-(P[1, 1]+P[1, 2])(Q[1, 1]-Q[1, 2]))^2, n); m[1, 1] := `mod`((P[1, 1]+P[1, 2])^2*(P[1, 1]-P[1, 2])^2, n); m[1, 2] := `mod`((4*P[1, 1])(P[1, 1]^2+(a+2)*P[1, 1]*P[1, 2]), n); Q[1, 1] := h[1, 1]; Q[1, 2] := h[1, 2]; P[1, 1] := m[1, 1]; P[1, 2] := m[1, 2] else return max(gcd(Q[1, 1], n), gcd(Q[1, 2], n), gcd(P[1, 1], n), gcd(P[1, 2], n)) end if else if gcd(Q[1, 1], n) = 1 and gcd(Q[1, 2], n) = 1 and gcd(P[1, 1], n) = 1 and gcd(P[1, 2], n) = 1 then m[1, 1] := `mod`(((P[1, 1]-P[1, 2])(Q[1, 1]+Q[1, 2])+(P[1, 1]+P[1, 2])(Q[1, 1]-Q[1, 2]))^2, n); m[1, 2] := `mod`(x1*((P[1, 1]-P[1, 2])(Q[1, 1]+Q[1, 2])-(P[1, 1]+P[1, 2])(Q[1, 1]-Q[1, 2]))^2, n); h[1, 1] := `mod`((Q[1, 1]+Q[1, 2])^2*(Q[1, 1]-Q[1, 2])^2, n); h[1, 2] := `mod`((4*Q[1, 1])(Q[1, 1]^2+(a+2)*Q[1, 1]*Q[1, 2]), n); Q[1, 1] := h[1, 1]; Q[1, 2] := h[1, 2]; P[1, 1] := m[1, 1]; P[1, 2] := m[1, 2] else return max(gcd(Q[1, 1], n), gcd(Q[1, 2], n), gcd(P[1, 1], n), gcd(P[1, 2], n)) end if end if end do; return Q end proc; 1}{\[\]}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{echelle := proc (k, x1, a, b, n) local r, m, h, X, Z, Q, P, j; r := 0; m := Matrix(1, 2); h := Matrix(1, 2); while 2^r <= k do r := r+1 end do; X := convert(k, 'base', 2); Z := convert(X, array); Q := Matrix(1, 2); P := Matrix(1, 2); Q[1, 1] := `mod`(x1, n); Q[1, 2] := 1; P[1, 1] := `mod`((x1+1)^2*(x1-1)^2, n); P[1, 2] := `mod`((4*x1)(x1^2+(a+2)*x1), n); for j from 0 to r-2 do if Z[r-1-j] = 1 then if gcd(Q[1, 1], n) = 1 and gcd(Q[1, 2], n) = 1 and gcd(P[1, 1], n) = 1 and gcd(P[1, 2], n) = 1 then h[1, 1] := `mod`(((P[1, 1]-P[1, 2])(Q[1, 1]+Q[1, 2])+(P[1, 1]+P[1, 2])(Q[1, 1]-Q[1, 2]))^2, n); h[1, 2] := `mod`(x1*((P[1, 1]-P[1, 2])(Q[1, 1]+Q[1, 2])-(P[1, 1]+P[1, 2])(Q[1, 1]-Q[1, 2]))^2, n); m[1, 1] := `mod`((P[1, 1]+P[1, 2])^2*(P[1, 1]-P[1, 2])^2, n); m[1, 2] := `mod`((4*P[1, 1])(P[1, 1]^2+(a+2)*P[1, 1]*P[1, 2]), n); Q[1, 1] := h[1, 1]; Q[1, 2] := h[1, 2]; P[1, 1] := m[1, 1]; P[1, 2] := m[1, 2] else return max(gcd(Q[1, 1], n), gcd(Q[1, 2], n), gcd(P[1, 1], n), gcd(P[1, 2], n)) end if else if gcd(Q[1, 1], n) = 1 and gcd(Q[1, 2], n) = 1 and gcd(P[1, 1], n) = 1 and gcd(P[1, 2], n) = 1 then m[1, 1] := `mod`(((P[1, 1]-P[1, 2])(Q[1, 1]+Q[1, 2])+(P[1, 1]+P[1, 2])(Q[1, 1]-Q[1, 2]))^2, n); m[1, 2] := `mod`(x1*((P[1, 1]-P[1, 2])(Q[1, 1]+Q[1, 2])-(P[1, 1]+P[1, 2])(Q[1, 1]-Q[1, 2]))^2, n); h[1, 1] := `mod`((Q[1, 1]+Q[1, 2])^2*(Q[1, 1]-Q[1, 2])^2, n); h[1, 2] := `mod`((4*Q[1, 1])(Q[1, 1]^2+(a+2)*Q[1, 1]*Q[1, 2]), n); Q[1, 1] := h[1, 1]; Q[1, 2] := h[1, 2]; P[1, 1] := m[1, 1]; P[1, 2] := m[1, 2] else return max(gcd(Q[1, 1], n), gcd(Q[1, 2], n), gcd(P[1, 1], n), gcd(P[1, 2], n)) end if end if end do; return Q end proc}{\[\displaystyle {\it echelle}\, := \,\textbf{proc} (kx1abn) \\
+\textbf{local} \,r,\,m,\,h,\,X,\,Z,\,Q,\,P,\,j; \\
+\mapleIndent{1} r\,:=\,0;\\
+\mapleIndent{1} m\,:=\,\mathit{Matrix} (1,\,2);\\
+\mapleIndent{1} h\,:=\,\mathit{Matrix} (1,\,2);\\
+\mapleIndent{1} \textbf{while} \,2\hat{~}{r}\&lek \,\textbf{do}\\
+\mapleIndent{2} r\,:=\,r + 1\\
+\mapleIndent{1} \textbf{end\ do};;\\
+\mapleIndent{1} X\,:=\,\mathit{convert} (k,\,'base',\,2);\\
+\mapleIndent{1} Z\,:=\,\mathit{convert} (X,\,array);\\
+\mapleIndent{1} Q\,:=\,\mathit{Matrix} (1,\,2);\\
+\mapleIndent{1} P\,:=\,\mathit{Matrix} (1,\,2);\\
+\mapleIndent{1} Q[1,\,1]\,:=\,\mathit{mod} (x1,\,n);\\
+\mapleIndent{1} Q[1,\,2]\,:=\,1;\\
+\mapleIndent{1} P[1,\,1]\,:=\,\mathit{mod} (x1 + 1\hat{~}{2} \ast x1 + -1\hat{~}{2},\,n);\\
+\mapleIndent{1} P[1,\,2]\,:=\,\mathit{mod} (\mathit{4 \ast x1} (x1\hat{~}{2} + (a + 2) \ast x1),\,n);\\
+\mapleIndent{1} \textbf{for} \,j \,\textbf{from} \,0 \,\textbf{to} \,r + -2 \,\textbf{do}\\
+\mapleIndent{2} \textbf{if} \,Z[r + -1-j] \, = \, 1 \, \textbf{then} \\
+\mapleIndent{3} \textbf{if} \,\mathit{gcd} (Q[1,\,1],\,n) \, = \, 1 \, \textbf{and} \, \mathit{gcd} (Q[1,\,2],\,n) \, = \, 1 \, \textbf{and} \, \mathit{gcd} (P[1,\,1],\,n) \, = \, 1 \, \textbf{and} \, \mathit{gcd} (P[1,\,2],\,n) \, = \, 1 \, \textbf{then} \\
+\mapleIndent{4} h[1,\,1]\,:=\,\mathit{mod} (\mathit{P[1,\,1]-P[1,\,2]} (Q[1,\,1] + Q[1,\,2]) + \mathit{P[1,\,1] + P[1,\,2]} (Q[1,\,1]-Q[1,\,2])\hat{~}{2},\,n);\\
+\mapleIndent{4} h[1,\,2]\,:=\,\mathit{mod} (x1 \ast \mathit{P[1,\,1]-P[1,\,2]} (Q[1,\,1] + Q[1,\,2])-\mathit{P[1,\,1] + P[1,\,2]} (Q[1,\,1]-Q[1,\,2])\hat{~}{2},\,n);\\
+\mapleIndent{4} m[1,\,1]\,:=\,\mathit{mod} (P[1,\,1] + P[1,\,2]\hat{~}{2} \ast P[1,\,1]-P[1,\,2]\hat{~}{2},\,n);\\
+\mapleIndent{4} m[1,\,2]\,:=\,\mathit{mod} (\mathit{4 \ast P[1,\,1]} (P[1,\,1]\hat{~}{2} + (a + 2) \ast P[1,\,1] \ast P[1,\,2]),\,n);\\
+\mapleIndent{4} Q[1,\,1]\,:=\,h[1,\,1];\\
+\mapleIndent{4} Q[1,\,2]\,:=\,h[1,\,2];\\
+\mapleIndent{4} P[1,\,1]\,:=\,m[1,\,1];\\
+\mapleIndent{4} P[1,\,2]\,:=\,m[1,\,2]\\
+\mapleIndent{3} \textbf{else}\\
+\mapleIndent{4} \textbf{return}\,\mathit{max} (\mathit{gcd} (Q[1,\,1],\,n),\,\mathit{gcd} (Q[1,\,2],\,n),\,\mathit{gcd} (P[1,\,1],\,n),\,\mathit{gcd} (P[1,\,2],\,n))\\
+\mapleIndent{3} \textbf{end\ if}; \\
+\mapleIndent{2} \textbf{else}\\
+\mapleIndent{3} \textbf{if} \,\mathit{gcd} (Q[1,\,1],\,n) \, = \, 1 \, \textbf{and} \, \mathit{gcd} (Q[1,\,2],\,n) \, = \, 1 \, \textbf{and} \, \mathit{gcd} (P[1,\,1],\,n) \, = \, 1 \, \textbf{and} \, \mathit{gcd} (P[1,\,2],\,n) \, = \, 1 \, \textbf{then} \\
+\mapleIndent{4} m[1,\,1]\,:=\,\mathit{mod} (\mathit{P[1,\,1]-P[1,\,2]} (Q[1,\,1] + Q[1,\,2]) + \mathit{P[1,\,1] + P[1,\,2]} (Q[1,\,1]-Q[1,\,2])\hat{~}{2},\,n);\\
+\mapleIndent{4} m[1,\,2]\,:=\,\mathit{mod} (x1 \ast \mathit{P[1,\,1]-P[1,\,2]} (Q[1,\,1] + Q[1,\,2])-\mathit{P[1,\,1] + P[1,\,2]} (Q[1,\,1]-Q[1,\,2])\hat{~}{2},\,n);\\
+\mapleIndent{4} h[1,\,1]\,:=\,\mathit{mod} (Q[1,\,1] + Q[1,\,2]\hat{~}{2} \ast Q[1,\,1]-Q[1,\,2]\hat{~}{2},\,n);\\
+\mapleIndent{4} h[1,\,2]\,:=\,\mathit{mod} (\mathit{4 \ast Q[1,\,1]} (Q[1,\,1]\hat{~}{2} + (a + 2) \ast Q[1,\,1] \ast Q[1,\,2]),\,n);\\
+\mapleIndent{4} Q[1,\,1]\,:=\,h[1,\,1];\\
+\mapleIndent{4} Q[1,\,2]\,:=\,h[1,\,2];\\
+\mapleIndent{4} P[1,\,1]\,:=\,m[1,\,1];\\
+\mapleIndent{4} P[1,\,2]\,:=\,m[1,\,2]\\
+\mapleIndent{3} \textbf{else}\\
+\mapleIndent{4} \textbf{return}\,\mathit{max} (\mathit{gcd} (Q[1,\,1],\,n),\,\mathit{gcd} (Q[1,\,2],\,n),\,\mathit{gcd} (P[1,\,1],\,n),\,\mathit{gcd} (P[1,\,2],\,n))\\
+\mapleIndent{3} \textbf{end\ if}; \\
+\mapleIndent{2} \textbf{end\ if}; \\
+\mapleIndent{1} \textbf{end\ do};;\\
+\mapleIndent{1} \textbf{return}\,Q\\
+\textbf{end\ proc};\]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{2d}{Lenstra2 := proc (n) local b, Q, p, a, x1, y1; a := rand(); x1 := rand(); for p from 2 to 300000000 do Q := echelle(p, x1, a, b, n); a := rand(); x1 := rand(); if Q::integer then return Q end if end do; print("Réessayer avec une nouvelle courbe et/ou point"); Q end proc; 1}{\[\]}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{Lenstra2 := proc (n) local b, Q, p, a, x1, y1; a := rand(); x1 := rand(); for p from 2 to 300000000 do Q := echelle(p, x1, a, b, n); a := rand(); x1 := rand(); if Q::integer then return Q end if end do; print("Réessayer avec une nouvelle courbe et/ou point"); Q end proc}{\[\displaystyle {\it Lenstra2}\, := \,\textbf{proc} (n) \\
+\textbf{local} \,b,\,Q,\,p,\,a,\,x1,\,y1; \\
+\mapleIndent{1} a\,:=\,\mathit{rand} ();\\
+\mapleIndent{1} x1\,:=\,\mathit{rand} ();\\
+\mapleIndent{1} \textbf{for} \,p \,\textbf{from} \,2 \,\textbf{to} \,300000000 \,\textbf{do}\\
+\mapleIndent{2} Q\,:=\,\mathit{echelle} (p,\,x1,\,a,\,b,\,n);\\
+\mapleIndent{2} a\,:=\,\mathit{rand} ();\\
+\mapleIndent{2} x1\,:=\,\mathit{rand} ();\\
+\mapleIndent{2} \textbf{if} \,Q::integer \, \textbf{then} \\
+\mapleIndent{3} \textbf{return}\,Q\\
+\mapleIndent{2} \textbf{end\ if}; \\
+\mapleIndent{1} \textbf{end\ do};;\\
+\mapleIndent{1} \mathit{print} (R�essayer\ avec\ une\ nouvelle\ courbe\ et/ou\ point'');\\
+\mapleIndent{1} Q\\
+\textbf{end\ proc};\]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{Maple Normal}{
+\begin{Maple Normal}{
+\mapleinline{inert}{2d}{}{\[\displaystyle \]}
+}\end{Maple Normal}
+}\end{Maple Normal}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{2d}{with(numtheory)}{\[{\it with} \left( {\it numtheory} \right) \]}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{[numtheory:-GIgcd, numtheory:-bigomega, numtheory:-cfrac, numtheory:-cfracpol, numtheory:-cyclotomic, numtheory:-divisors, numtheory:-factorEQ, numtheory:-factorset, numtheory:-fermat, numtheory:-imagunit, numtheory:-index, numtheory:-integral_basis, numtheory:-invcfrac, numtheory:-invphi, numtheory:-iscyclotomic, numtheory:-issqrfree, numtheory:-ithrational, numtheory:-jacobi, numtheory:-kronecker, numtheory:-lambda, numtheory:-legendre, numtheory:-mcombine, numtheory:-mersenne, numtheory:-migcdex, numtheory:-minkowski, numtheory:-mipolys, numtheory:-mlog, numtheory:-mobius, numtheory:-mroot, numtheory:-msqrt, numtheory:-nearestp, numtheory:-nthconver, numtheory:-nthdenom, numtheory:-nthnumer, numtheory:-nthpow, order, numtheory:-pdexpand, phi, Pi, numtheory:-pprimroot, numtheory:-primroot, numtheory:-quadres, numtheory:-rootsunity, numtheory:-safeprime, sigma, numtheory:-sq2factor, numtheory:-sum2sqr, tau, numtheory:-thue, varphi]}{\[\displaystyle [{\it GIgcd},{\it bigomega},{\it cfrac},{\it cfracpol}\\
+\mbox{},{\it cyclotomic},{\it divisors},{\it factorEQ},{\it factorset}\\
+\mbox{},{\it fermat},{\it imagunit},{\it index},{\it integral\_basis}\\
+\mbox{},{\it invcfrac},{\it invphi},{\it iscyclotomic},{\it issqrfree}\\
+\mbox{},{\it ithrational},{\it jacobi},{\it kronecker},\lambda\\
+\mbox{},{\it legendre},{\it mcombine},{\it mersenne},{\it migcdex}\\
+\mbox{},{\it minkowski},{\it mipolys},{\it mlog},{\it mobius}\\
+\mbox{},{\it mroot},{\it msqrt},{\it nearestp},{\it nthconver}\\
+\mbox{},{\it nthdenom},{\it nthnumer},{\it nthpow},{\it order}\\
+\mbox{},{\it pdexpand},\phi,\pi,{\it pprimroot},{\it primroot}\\
+\mbox{},{\it quadres},{\it rootsunity},{\it safeprime},\sigma\\
+\mbox{},{\it sq2factor},{\it sum2sqr},\tau,{\it thue},\varphi\\
+\mbox{}]\]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{2d}{card := proc (a, b, c, p) local x, y, s; s := 0; for x from 0 to p-1 do y := x^3+a*x^2+b*x+c; s := s+1+numtheory:-legendre(y, p) end do; return s+1 end proc; 1}{\[\]}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{card := proc (a, b, c, p) local x, y, s; s := 0; for x from 0 to p-1 do y := x^3+a*x^2+b*x+c; s := s+1+numtheory:-legendre(y, p) end do; return s+1 end proc}{\[\displaystyle {\it card}\, := \,\textbf{proc} (abcp) \\
+\textbf{local} \,x,\,y,\,s; \\
+\mapleIndent{1} s\,:=\,0;\\
+\mapleIndent{1} \textbf{for} \,x \,\textbf{from} \,0 \,\textbf{to} \,p + -1 \,\textbf{do}\\
+\mapleIndent{2} y\,:=\,x\hat{~}{3} + a \ast x\hat{~}{2} + b \ast x + c;\\
+\mapleIndent{2} s\,:=\,s + 1 + \mathit{numtheory:-legendre} (y,\,p)\\
+\mapleIndent{1} \textbf{end\ do};;\\
+\mapleIndent{1} \textbf{return}\,s + 1\\
+\textbf{end\ proc};\]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{Maple Normal}{
+\begin{Maple Normal}{
+\mapleinline{inert}{2d}{}{\[\displaystyle \]}
+}\end{Maple Normal}
+}\end{Maple Normal}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{2d}{card(1525453, 45646, 166, 11)}{\[{\it card} \left( 1525453,45646,166,11 \right) \]}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{15}{\[\displaystyle 15\]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{Maple Normal}{
+\begin{Maple Normal}{
+\mapleinline{inert}{2d}{}{\[\displaystyle \]}
+}\end{Maple Normal}
+}\end{Maple Normal}
+\end{document}
